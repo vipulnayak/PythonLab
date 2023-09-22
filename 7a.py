@@ -1,21 +1,44 @@
-class Employee:
+import math
+
+class shape:
     def __init__(self):
-        self.name=" "
-        self.empid=" "
-        self.depid=" "
-        self.salary=0
-    def employread(self):
-        self.name=input("enter the name of the employee:")
-        self.empid=input("enter the employee id:")
-        self.depid=input("enter the dept id:")
-        self.salary=float(input("enter the salary of the employee:"))
-    def empdisplay(self):
-        print("the name of the employee:",self.name)
-        print("employee id:",self.empid)
-        print("dept id:",self.depid)
-        print("salary of the employee:",self.salary)
+        self.name=""
+        self.area=0
+    def showarea(self):
+        print("the",self.name,"hass area of",self.area,"units")
+    
+class traingle(shape):
+    def __init__(self,base,height):
+        self.name="traingle"
+        self.area=0
+        self.base=base
+        self.height=height
+    def calcarea(self):
+        self.area=0.5*self.base*self.height
+        
+class rectangle(shape):
+    def __init__(self,length,breadth):
+        self.name="rectangle"
+        self.area=0
+        self.length=length
+        self.breadth=breadth
+    def calcarea(self):
+        self.area=self.length*self.breadth
+        
+class circle(shape):
+    def __init__(self,radius):
+        self.name="circle"
+        self.area=0
+        self.radius=radius
+    def calcarea(self):
+        self.area=math.pi*self.radius*self.radius
 
-
-e1=Employee()
-e1.employread(even)
-e1.empdisplay(even)
+c1=circle(6)
+c1.calcarea()
+c1.showarea()
+r=rectangle(6,5)
+r.calcarea()
+r.showarea()
+t=traingle(6,5)
+t.calcarea()
+t.showarea()

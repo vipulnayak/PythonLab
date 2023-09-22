@@ -1,0 +1,17 @@
+{
+    "banglore": {
+        "temp": 32,
+        "humidity": 87,
+        "disc": "clean sky"
+    },
+    "karkala": {
+        "temp": 28,
+        "humidity": 97,
+        "disc": "cloudy"
+    },
+    "udupi": {
+        "temp": 30,
+        "humidity": 78,
+        "disc": "sunny"
+    }
+}

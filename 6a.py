@@ -1,15 +1,16 @@
 import os.path
 import sys
-fname = input("Enter the filename : ") 
+fname=input("enter the file name \n")
 if not os.path.isfile(fname):
- print("File", fname, "doesn't exists")
- sys.exit(0)
-infile = open(fname, "r")
-lineList = infile.readlines()
-for i in range(len(lineList)):
-    print(i+1, ":", lineList[i],end=" ") 
-word = input("\n Enter a word : ")
-cnt = 0
-for line in lineList:
- cnt += line.count(word)
-print("The word", word, "appears", cnt, "times in the file")
+    print("the entered file does not exist")
+    sys.exit(0)
+
+infile=open(fname,'r')
+linelist=infile.readlines()
+for i in range(len(linelist)):
+    print(i+1,":",linelist[i],end=" ")
+count=0
+word=input(" \n enter the word to be counted \n")
+for line in linelist:
+    count+=line.count(word)
+print("the word",word,"appears",count,"times in the file")
